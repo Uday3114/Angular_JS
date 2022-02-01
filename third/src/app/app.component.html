@@ -1,0 +1,28 @@
+<div style="text-align: center; color: green;">
+  <h1>{{title}}</h1>
+  </div>
+  <hr>
+  <div>
+  <ul>
+  <li>
+  {{courses}}
+  </li>
+  </ul>
+  </div>
+  <br>
+  <br>
+  <div>
+  Courses :
+  <select>
+  <option *ngFor="let cname of courses">{{cname}}</option>
+  </select>
+  </div>
+
+  <br>
+  <br>
+
+  <div style="color: red'; text-align:center;">
+    <span *ngIf="isAvilable; then condition1 else condition2"></span>
+    <ng-template #condition1>Condition is Valid</ng-template>
+    <ng-template #condition2>Condition is Invalid</ng-template>
+  </div>

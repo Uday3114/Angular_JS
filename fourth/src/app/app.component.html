@@ -1,0 +1,59 @@
+<div style="text-align: center; color: green;">
+    <h1>{{title}}</h1>
+    </div>
+    <!--<hr>
+    <div>
+    <ul>
+    <li>
+    {{Students}}
+    </li>
+    </ul>
+    </div>-->
+    Students :
+    <select>
+    <option *ngFor="let students of Students">{{students}}</option>
+    </select>
+
+  <!--  <div>
+    <ul>
+    <li>
+    {{Faculty}}
+    </li>
+    </ul>
+    </div>-->
+    <br>
+    <br>
+    <div>
+    
+    Faculty:
+    <select>
+        <option *ngFor="let faculty of Faculty">{{faculty}}</option>
+        </select>
+    </div>
+  
+    <br>
+    <br>
+  
+    <div style="color: red'; text-align:center;">
+      <span *ngIf="isAvilable; then condition1 else condition2"></span>
+      <ng-template #condition1>Condition is Valid</ng-template>
+      <ng-template #condition2>Condition is Invalid</ng-template>
+    </div>
+    <br>
+    <br>
+    <div>
+        <input type="checkbox" id="Python" name="Python">
+        <label for="Python">Python</label>
+        <input type="checkbox" id="Angular" name="Angular">
+        <label for="Angular">Angular</label>
+        <input type="checkbox" id="JS" name="JS">
+        <label for="JS">JS</label>
+        <br>
+        <br>
+        <button type="submit"  value="Submit">Submit</button>
+    </div>
+    <br>
+    <br>
+    <div>
+      <span appChangeText>Welcome to {{title}}</span>
+    </div>
